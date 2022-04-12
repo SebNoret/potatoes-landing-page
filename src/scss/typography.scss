@@ -1,0 +1,26 @@
+/****************  Tyography *****************************/
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+}
+h1,
+h2 {
+  font-family: "Pacifico", cursive;
+  letter-spacing: 0.4rem;
+}
+#nav-bar {
+  font-size: 1rem;
+}
+
+.fa-medium-size {
+  font-size: 1.5rem;
+  a {
+    transition: color 250ms ease-in-out;
+    &:hover,
+    &:focus {
+      color: $green;
+    }
+  }
+}

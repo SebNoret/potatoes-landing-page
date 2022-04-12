@@ -1,0 +1,177 @@
+.logo h1 {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo a {
+  transition: color 250ms ease-in-out;
+  color: white;
+
+  &:hover,
+  &:focus {
+    color: $nav-link-color;
+  }
+}
+nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  text-align: left;
+  background: $nav-background;
+
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+nav .nav-link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.nav-toggle {
+  display: none;
+}
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-burger span,
+.nav-burger span::before,
+.nav-burger span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+.nav-burger span::before,
+.nav-burger span::after {
+  content: "";
+  position: absolute;
+}
+.nav-burger span::before {
+  bottom: 7px;
+}
+.nav-burger span::after {
+  top: 7px;
+}
+.nav-toggle:checked ~ .nav-burger span {
+  transform: rotate(45deg);
+}
+.nav-toggle:checked ~ .nav-burger span::after {
+  opacity: 0;
+}
+.nav-toggle:checked ~ .nav-burger span::before {
+  transform: rotate(90deg);
+  top: 0;
+}
+.nav-toggle ~ .nav-burger span,
+.nav-toggle ~ .nav-burger span::before {
+  transition: transform 400ms ease-in-out;
+}
+.nav-toggle ~ .nav-burger span::after {
+  transition: opacity 200ms ease-in-out;
+}
+.nav-toggle:checked ~ nav .nav-link {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 300ms;
+}
+.lang {
+  margin-right: 0;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+
+  padding: 0.1rem 0.2rem;
+  transition: all 250ms ease-in-out;
+  color: white;
+  &:hover,
+  &:focus {
+    border-color: $comp-blue;
+    color: $comp-blue;
+    background-color: lighten($pink, 25%);
+  }
+  &.active {
+    border-color: $green;
+    color: white;
+    background-color: $green;
+  }
+}
+@media screen and (min-width: 800px) {
+  .nav-burger span {
+    display: none;
+  }
+  #header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(620px, 3fr) 1fr;
+    box-shadow: -1px 3px 10px rgb(19, 18, 18);
+  }
+  .logo {
+    grid-column: 2 / 3;
+  }
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav li {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+  }
+  nav .nav-link {
+    opacity: 1;
+    position: relative;
+  }
+  nav .nav-link:hover,
+  nav .nav-link:focus {
+    color: $nav-link-color;
+  }
+  nav .nav-link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    bottom: -0.8rem;
+    background: $nav-link-color;
+    border-radius: 5px;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 400ms;
+  }
+  nav .nav-link:hover::before,
+  nav .nav-link:focus::before {
+    transform: scale(1, 1);
+  }
+}
