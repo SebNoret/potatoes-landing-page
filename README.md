@@ -8,3 +8,18 @@ Also, the page is in two versions, french and english.
 ## TODO
 
 There are some CSS bugs that I have to fix when the website is loaded in firefox on a laptop screen. -->
+
+# potatoes-landing-page
+
+Une landing page à propos des pommes de terre parce que j'aime les pommes de terre!!!
+
+Ce projet fait partie de l'ancien parcours de formation au responsive design proposé sur le site [Freecodecamp](https://www.freecodecamp.org/learn/responsive-web-design/)
+
+Le menu responsive est créé uniquement avec du CSS et comporte des petites animations au survol sur les items.
+J'ai utilisé GULP pour pouvoir minifier les fichiers.
+
+La page est disponible en française et en angglais.
+
+## TODO
+
+Un bug d'affichage des fenêtres modales sur firefox,  sur les écrans de laptop de petite taille à corriger.
