@@ -191,6 +191,7 @@ body::before {
 @media screen and (min-width: 1000px) {
   .main {
     margin-top: 10vh;
+    max-width: 70%;
   }
 
   #description {
@@ -199,7 +200,8 @@ body::before {
     width: 100%;
     // border: 1px solid black;
     padding: 0;
-    margin-top: 10vh;
+    margin-top: 0;
+
     .promotion {
       // border: 1px solid black;
       margin-bottom: 0;
@@ -207,6 +209,7 @@ body::before {
       display: flex;
       align-items: flex-end;
       flex-wrap: wrap;
+
       h2 {
         margin-bottom: 1rem;
         line-height: 1.5vh;
