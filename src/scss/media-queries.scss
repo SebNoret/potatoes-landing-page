@@ -1,0 +1,202 @@
+/************responsive adaptation to responsive menu********************************/
+
+.responsive-main {
+  transition: margin-top 400ms ease-in-out;
+  margin-top: 40vh;
+}
+.responsive-anchor {
+  height: 370px; /*same height as header */
+  margin-top: -370px; /*same height as header*/
+}
+
+// from style scss file
+@media screen and (max-width: 350px) {
+  .logo h1 img {
+    display: none;
+  }
+  .main {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}
+
+//ipad
+
+@media screen and (max-width: 415px) {
+  .modal img {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .potato-card {
+    width: 45%;
+  }
+  #hero {
+    form {
+      max-width: 50%;
+      margin: 0 auto;
+    }
+  }
+}
+
+// from modal scss file
+
+/*@media screen and (max-width: 799px) {
+  .modal img {
+    width: 45%;
+  }
+}*/
+@media screen and (min-width: 800px) {
+  .potato-card {
+    width: 30%;
+  }
+  .main {
+    margin-top: 10vh;
+
+    width: 85%;
+    margin-bottom: 5vh;
+  }
+  #hero {
+    max-width: 70%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  #description {
+    // width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .promotion {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // from menu scss file
+
+  .nav-burger span {
+    display: none;
+  }
+  #header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(620px, 3fr) 1fr;
+    box-shadow: -1px 3px 10px rgb(19, 18, 18);
+  }
+  .logo {
+    grid-column: 2 / 3;
+  }
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav li {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+  }
+  nav .nav-link {
+    opacity: 1;
+    position: relative;
+  }
+  nav .nav-link:hover,
+  nav .nav-link:focus {
+    color: $nav-link-color;
+  }
+  nav .nav-link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    bottom: -0.8rem;
+    background: $nav-link-color;
+    border-radius: 5px;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 400ms;
+  }
+  nav .nav-link:hover::before,
+  nav .nav-link:focus::before {
+    transform: scale(1, 1);
+  }
+
+  // from modal scss file
+
+  .modal {
+    //width: 70%;
+    max-width: 30%;
+    // max-height: 70%;
+  }
+
+  .modal img {
+    width: 100%;
+  }
+}
+
+// grands écrans
+@media screen and (min-width: 1000px) {
+  .main {
+    margin-top: 10vh;
+    max-width: 70%;
+  }
+
+  #description {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    // border: 1px solid black;
+    padding: 0;
+    margin-top: 0;
+
+    .promotion {
+      // border: 1px solid black;
+      margin-bottom: 0;
+      padding: 1rem;
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      margin-top: 10vh;
+
+      h2 {
+        margin-bottom: 1rem;
+        line-height: 1.5vh;
+      }
+
+      #hero h2 {
+        line-height: 1.5vh;
+      }
+      p {
+        width: 100%;
+      }
+    }
+  }
+  #hero {
+    margin-top: 10vh;
+    // background-color: red;
+    max-width: 40%;
+  }
+  /******from cards scss file ********************************/
+  #potatoes-list {
+    margin-top: 10vh;
+  }
+}
+
+//ipad
+@media screen and (min-height: 1023px) and (min-width: 767px) {
+  .modal {
+    // max-height: 50%;
+  }
+}

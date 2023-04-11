@@ -5,6 +5,8 @@ html {
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   margin: 0;
@@ -37,6 +39,7 @@ body::before {
 }
 #header {
   background: $nav-background;
+  padding: 1rem;
   text-align: center;
   width: 100%;
   top: 0;
@@ -51,7 +54,7 @@ body::before {
   padding-top: 5vh;
   padding-left: 5vh;
   padding-right: 5vh;
-  padding-bottom: 10vh;
+  padding-bottom: 5vh;
   box-shadow: 10px 10px 17px -8px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 17px -8px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 17px -8px rgba(0, 0, 0, 0.75);
@@ -64,7 +67,8 @@ body::before {
   color: darken($comp-blue, 37%);
 }
 .main h2 {
-  line-height: 6vh;
+  // line-height: 5vh;
+  font-size: 2rem;
 }
 .hero-title {
   font-size: 1.5rem;
@@ -79,8 +83,11 @@ body::before {
 }
 
 #hero h2 {
-  margin-bottom: 5vh;
-  line-height: 6vh;
+  margin-bottom: 3vh;
+  line-height: 3rem;
+}
+#hero p {
+  margin-bottom: 1.5rem;
 }
 //email input
 #email {
@@ -109,15 +116,15 @@ body::before {
 }
 
 #description {
-  margin-top: 10vh;
-  padding: 5vh;
+  margin-top: 3vh;
+  padding: 1vh;
 }
 .promotion {
-  margin-bottom: 10vh;
+  margin-bottom: 3vh;
 }
 .promotion h2 {
   text-align: center;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
   line-height: 1.5em !important;
   padding-top: 0;
 }
@@ -144,91 +151,6 @@ body::before {
   p {
     width: 100%;
     text-align: center;
+    padding-bottom: 1rem;
   }
-}
-@media screen and (max-width: 350px) {
-  .logo h1 img {
-    display: none;
-  }
-}
-@media screen and (min-width: 500px) {
-  .potato-card {
-    width: 30%;
-  }
-  #hero {
-    form {
-      max-width: 50%;
-      margin: 0 auto;
-    }
-  }
-}
-@media screen and (min-width: 800px) {
-  .main {
-    margin-top: 40vh;
-
-    width: 85%;
-    margin-bottom: 10vh;
-  }
-  #hero {
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .hero-title {
-    font-size: 2rem;
-  }
-  #description {
-    // width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .promotion {
-    max-width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .main {
-    margin-top: 10vh;
-    max-width: 70%;
-  }
-
-  #description {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    // border: 1px solid black;
-    padding: 0;
-    margin-top: 0;
-
-    .promotion {
-      // border: 1px solid black;
-      margin-bottom: 0;
-      padding: 1rem;
-      display: flex;
-      align-items: flex-end;
-      flex-wrap: wrap;
-
-      h2 {
-        margin-bottom: 1rem;
-        line-height: 1.5vh;
-      }
-      #hero h2 {
-        line-height: 1.5vh;
-      }
-      p {
-        width: 100%;
-      }
-    }
-  }
-}
-/************responsive adaptation to responsive menu********************************/
-.responsive-main {
-  transition: margin-top 400ms ease-in-out;
-  margin-top: 40vh;
-}
-.responsive-anchor {
-  height: 370px; /*same height as header*/
-  margin-top: -370px; /*same height as header*/
 }
