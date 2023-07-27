@@ -16,10 +16,6 @@ Une landing page à propos des pommes de terre parce que j'aime les pommes de te
 Ce projet fait partie de l'ancien parcours de formation au responsive design proposé sur le site [Freecodecamp](https://www.freecodecamp.org/learn/responsive-web-design/)
 
 Le menu responsive est créé uniquement avec du CSS et comporte des petites animations au survol sur les items.
-J'ai utilisé GULP pour pouvoir minifier les fichiers.
+J'ai utilisé Vite comme outil de build.
 
-La page est disponible en française et en angglais.
-
-## TODO
-
-Un bug d'affichage des fenêtres modales sur firefox,  sur les écrans de laptop de petite taille à corriger.
+La page est disponible en française et en anglais.
