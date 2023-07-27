@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +22,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../app.css" />
+    <link rel="stylesheet" href="./scss/index.scss" />
     <title>MyPotatoes</title>
   </head>
 
@@ -32,7 +32,7 @@
         <h1>
           <img
             id="header-img"
-            src="../assets/images/potato.svg"
+            src="./assets/images/potato.svg"
             alt="potato-logo"
             height="40px"
             width="40px"
@@ -40,22 +40,27 @@
         </h1>
       </div>
       <input type="checkbox" name="" class="nav-toggle" id="nav-toggle" />
-      <nav id="nav-bar">
+      <nav id="nav-bar" role="navigation">
         <ul>
-          <li><a href="#section1" class="nav-link">La magie des patates</a></li>
-          <li><a href="#section2" class="nav-link">Nos produits</a></li>
-          <li><a href="#section3" class="nav-link">Contactez nous</a></li>
-          <li><a href="../" class="lang">EN</a></li>
-          <li><a href="#" class="lang active">FR</a></li>
+          <li><a href="#section1" class="nav-link">Potato magic</a></li>
+          <li><a href="#section2" class="nav-link">Our products</a></li>
+          <li><a href="#section3" class="nav-link">Contact us</a></li>
+          <li><a href="#" class="lang active">EN</a></li>
+          <li><a href="./fr/" class="lang">FR</a></li>
         </ul>
       </nav>
-      <label for="nav-toggle" class="nav-burger">
+      <label
+        for="nav-toggle"
+        class="nav-burger"
+        aria-controls="nav-bar"
+        aria-expanded="false"
+      >
         <span></span>
       </label>
     </header>
     <main class="main" id="main">
       <section class="testimony">
-        <h2 class="hero-title">Les patates sont notre vie</h2>
+        <h2 class="hero-title">Our life is potatoes</h2>
         <span class="anchor" id="section1"></span>
 
         <div class="video-wrapper">
@@ -71,94 +76,94 @@
         </div>
       </section>
       <section id="potatoes-list">
-        <h2>Nos produits</h2>
+        <h2>Our Products</h2>
         <span class="anchor" id="section2"></span>
 
         <div class="potatoes">
           <div class="potato-card">
             <div class="card-container">
               <img
-                src="../assets/images/black-potato-3.jpg"
+                src="./assets/images/black-potato-3.jpg"
                 alt=""
                 height="75"
                 width="150"
               />
 
-              <h3 class="title">Patates noires</h3>
+              <h3 class="title">Black Potatoes</h3>
               <button class="btn modal-btn" href="#black-potato">
-                Plus de détails
+                More details
               </button>
             </div>
           </div>
           <div class="modal-bg" id="black-potato">
             <div class="modal">
-              <img src="../assets/images/black-potato-3.jpg" alt="" />
-              <h4>Patates noires</h4>
-              <p class="subtitle">Juste un tas de patates noires</p>
+              <img src="./assets/images/black-potato-3.jpg" alt="" />
+              <h4>Black Potato</h4>
+              <p class="subtitle">Just a bunch of black potatoes.</p>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
                 necessitatibus! Repellendus fugit explicabo libero provident!
                 Sequi fuga,
               </p>
-              <button class="btn btn-close modal-close">Fermer</button>
+              <button class="btn btn-close modal-close">Close</button>
             </div>
           </div>
           <div class="potato-card">
             <div class="card-container">
               <img
-                src="../assets/images/red-potato-3.jpg"
+                src="./assets/images/red-potato-3.jpg"
                 height="75"
                 width="150"
                 alt=""
               />
-              <h3>Patates rouges</h3>
+              <h3>Red Potatoes</h3>
               <button class="btn modal-btn" href="#red-potato">
-                Plus de détails
+                More details
               </button>
             </div>
           </div>
           <div class="modal-bg" id="red-potato">
             <div class="modal">
-              <img src="../assets/images/red-potato-3.jpg" alt="" />
-              <h4>Patates rouges</h4>
+              <img src="./assets/images/red-potato-3.jpg" alt="" />
+              <h4>Red Potatoes</h4>
               <p class="subtitle">
-                Un autres tas de patates. Des patates rouges cette fois.
+                Another heap of potatoes. This time, red potatoes.
               </p>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
                 necessitatibus! Repellendus fugit explicabo libero provident!
                 Sequi fuga,
               </p>
-              <button class="btn btn-close modal-close">Fermer</button>
+              <button class="btn btn-close modal-close">Close</button>
             </div>
           </div>
           <div class="potato-card">
             <div class="card-container">
               <img
-                src="../assets/images/yellow-potato-3.jpg"
+                src="./assets/images/yellow-potato-3.jpg"
                 height="75"
                 width="150"
                 alt=""
               />
-              <h3>Patates jaunes</h3>
+              <h3>Yellow Potatoes</h3>
               <button class="btn modal-btn" href="#yellow-potato">
-                Plus de détails
+                More details
               </button>
             </div>
           </div>
           <div class="modal-bg" id="yellow-potato">
             <div class="modal">
-              <img src="../assets/images/yellow-potato-3.jpg" alt="" />
-              <h4>Patates jaunes</h4>
+              <img src="./assets/images/yellow-potato-3.jpg" alt="" />
+              <h4>Yellow potatoes</h4>
               <p class="subtitle">
-                Les dernières mais non les moindres, les patates jaunes!
+                Last but not the least, yellow potatoes everywhere!
               </p>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
                 necessitatibus! Repellendus fugit explicabo libero provident!
                 Sequi fuga,
               </p>
-              <button class="btn btn-close modal-close">Fermer</button>
+              <button class="btn btn-close modal-close">Close</button>
             </div>
           </div>
         </div>
@@ -166,40 +171,42 @@
 
       <section id="description">
         <div class="promotion">
-          <h2>Des patates délicieuses.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            fugit voluptatum eveniet. Dignissimos ipsum, fugit quasi rem, illo
-            dolorem, natus at laborum eos itaque vitae! Provident nam dolor
-            nostrum.
-          </p>
-        </div>
-        <div class="promotion">
-          <h2>Nous livrons partout</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-            dignissimos repudiandae corrupti? In error sapiente sint, laborum
-            quae officia ab aperiam ullam at aut fugiat assumenda quos maxime
-            odit inventore!
-          </p>
-        </div>
-        <div class="promotion">
-          <h2>Satisfait ou remboursé!</h2>
+          <h2>Our Patatos are delicious</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
             culpa ipsum? Assumenda eligendi dolor sint earum, aliquid voluptas
             sed deleniti aliquam odio iusto quisquam vel porro aspernatur
-            blanditiis amet! Ex?
+            blanditiis amet! Ex?Lorem ipsum dolor sit amet consectetur
+            adipisicing.
+          </p>
+        </div>
+        <div class="promotion">
+          <h2>We deliver everywhere</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
+            culpa ipsum? Assumenda eligendi dolor sint earum, aliquid voluptas
+            sed deleniti aliquam odio iusto quisquam vel porro aspernatur
+            blanditiis amet! Ex?Lorem ipsum dolor sit amet consectetur
+            adipisicing elit.
+          </p>
+        </div>
+
+        <div class="promotion">
+          <h2>Satisfaction guaranteed</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
+            culpa ipsum? Assumenda eligendi dolor sint earum, aliquid voluptas
+            sed deleniti aliquam odio iusto quisquam vel porro aspernatur
+            blanditiis amet! Ex?Lorem ipsum dolor sit amet consectetur
+            adipisicing elit.
           </p>
         </div>
       </section>
       <section id="hero">
         <span class="anchor" id="section3"></span>
 
-        <h2>Les patates sont bonnes pour la santé.</h2>
-        <p>
-          Envoyez-nous un Email pour en savoir plus sur l'univers des patates.
-        </p>
+        <h2>Potatoes are good for health!</h2>
+        <p>Send us an email to know more about Potatoes.</p>
         <form id="form" action="https://www.freecodecamp.com/email-submit">
           <div class="form-group">
             <input
@@ -207,17 +214,17 @@
               name="email"
               id="email"
               class="form-control"
-              placeholder="Entrez votre adresse Email"
+              placeholder="Enter your email adress"
               required
             />
-            <input type="submit" id="submit" class="btn" value="Envoyer" />
+            <input type="submit" id="submit" class="btn" value="Send" />
           </div>
         </form>
       </section>
     </main>
     <footer class="footer">
       <div class="social-media">
-        <p>Suivez-nous sur les réseaux sociaux :</p>
+        <p>Follow us on social media :</p>
 
         <div class="fa-medium-size">
           <a href="#"
@@ -232,11 +239,11 @@
         </div>
       </div>
 
-      <p>&copy; 2021 La compagnie patates</p>
+      <p>&copy; 2021 The potato compagny</p>
     </footer>
 
     <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" type="text/javascript" charset="utf-8"
         async defer></script> -->
-    <script src="../app.js" type="text/javascript" async defer></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>
