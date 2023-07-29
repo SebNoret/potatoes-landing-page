@@ -67,7 +67,7 @@ body::before {
   color: darken($comp-blue, 37%);
 }
 .main h2 {
-  // line-height: 5vh;
+  line-height: 1.1;
   font-size: 2rem;
 }
 .hero-title {
@@ -153,11 +153,4 @@ body::before {
     text-align: center;
     padding-bottom: 1rem;
   }
-}
-
-/*************    utility classes    ***********************************/
-
-lang-container {
-  display: flex;
-  align-items: center;
 }
