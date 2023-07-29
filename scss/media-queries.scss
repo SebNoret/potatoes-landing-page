@@ -27,6 +27,12 @@
     width: 90%;
   }
 }
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 60%;
+  }
+}
+
 @media screen and (min-width: 500px) {
   .potato-card {
     width: 45%;
@@ -82,8 +88,10 @@
     display: none;
   }
   #header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(620px, 3fr) 1fr;
+    display: flex;
+    justify-content: space-around;
+    // display: grid;
+    // grid-template-columns: 1fr auto minmax(620px, 3fr) 1fr;
     box-shadow: -1px 3px 10px rgb(19, 18, 18);
   }
   .logo {
@@ -94,7 +102,7 @@
   }
   nav {
     all: unset;
-    grid-column: 3 / 4;
+    // grid-column: 3 / 4;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -137,7 +145,7 @@
 
   .modal {
     //width: 70%;
-    max-width: 30%;
+    max-width: 40%;
     // max-height: 70%;
   }
 
@@ -146,8 +154,17 @@
   }
 }
 
-// grands écrans
 @media screen and (min-width: 1000px) {
+  .modal {
+    //width: 70%;
+    max-width: 30%;
+    // max-height: 70%;
+  }
+}
+
+// grands écrans
+// 100px de base
+@media screen and (min-width: 1394px) {
   .main {
     margin-top: 10vh;
     max-width: 70%;
@@ -166,13 +183,15 @@
       margin-bottom: 0;
       padding: 1rem;
       display: flex;
-      align-items: flex-end;
+      // align-items: flex-end;
       flex-wrap: wrap;
       margin-top: 10vh;
+      width: 30%;
 
       h2 {
         margin-bottom: 1rem;
         line-height: 1.5vh;
+        max-width: 100%;
       }
 
       #hero h2 {
@@ -186,17 +205,10 @@
   #hero {
     margin-top: 10vh;
     // background-color: red;
-    max-width: 40%;
+    max-width: 50%;
   }
   /******from cards scss file ********************************/
   #potatoes-list {
     margin-top: 10vh;
-  }
-}
-
-//ipad
-@media screen and (min-height: 1023px) and (min-width: 767px) {
-  .modal {
-    // max-height: 50%;
   }
 }

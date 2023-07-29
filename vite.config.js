@@ -10,7 +10,7 @@ const dev = "http://localhost:5173/";
 const prod = "https://sebnoret.github.io/portfolio/page-de-presentation/demo/";
 
 export default defineConfig({
-  base: test,
+  base: dev,
   plugins: [
     legacy({
       targets: ["defaults", "not IE 11"],

@@ -78,7 +78,7 @@ body::before {
 #hero {
   margin-top: 5vh;
   background-color: $hero-background;
-  padding: 5vh;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -153,4 +153,11 @@ body::before {
     text-align: center;
     padding-bottom: 1rem;
   }
+}
+
+/*************    utility classes    ***********************************/
+
+lang-container {
+  display: flex;
+  align-items: center;
 }

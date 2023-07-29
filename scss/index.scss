@@ -7,3 +7,10 @@
 @import "style";
 @import "menu";
 @import "media-queries";
+
+/*************    utility classes    ***********************************/
+
+.lang-container {
+  display: flex;
+  align-items: center;
+}
