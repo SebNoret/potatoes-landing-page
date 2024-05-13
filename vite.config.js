@@ -7,7 +7,8 @@ import autoprefixer from "autoprefixer";
 
 const test = "http://localhost:80/dist/";
 const dev = "http://localhost:5173/";
-const prod = "https://sebnoret.github.io/portfolio/page-de-presentation/demo/";
+const prod =
+  "https://sebnoret-portfolio.netlify.app/page-de-presentation/demo/";
 
 export default defineConfig({
   base: prod,
